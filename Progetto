@@ -1,3 +1,22 @@
 #il progetto
-#Questo è il progetto di Algoritmi
-#coddio
+#prendi i primi da 0 T-1 elementi
+
+def create_partition(lista,partizione):
+    x=0
+    for i in range(0,len(lista)-T+1):
+        j=T+x
+        partizione=list(lista[i:j])
+        print(partizione)
+        x=x+1
+
+prezzi=[4,2,1,4,4,2,1,9]
+T=3
+vuota=[]
+
+create_partition(prezzi,vuota)
+
+#ordinare gli elementi (trova il minore)
+
+#stampa l'indice del minore
+
+# prendi gli elementi da 1 a T
