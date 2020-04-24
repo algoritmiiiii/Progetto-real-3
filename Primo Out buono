@@ -1,0 +1,24 @@
+prezzi=[4,2,1,4,4,2,1,9]
+T=3
+
+def create_partition(lista,tempo):
+    if T>len(lista):
+        print("sei un down")
+    else:
+        x=0
+        for i in range(0,len(lista)-tempo+1):
+            j=tempo+x
+            partizione=list(lista[i:j])
+            indice_minimo_part=partizione.index(min(partizione))
+            y=i+indice_minimo_part
+            print(y)
+            x=x+1
+
+print(create_partition(prezzi,T))
+
+#fai un controllo su T se maggiore di n
+#ciclo con due contatori che incrementano di 1 ogni ciclo
+#la differenza tra il valore iniziale del primo contatore e del secondo è T (ciò consente di creare sottoliste di grandezza T)
+#prende l'indice del minimo della sottolista
+#aggiunge l'indice del minimo della sottolista al contatore iniziale (che identifica l'indice della lista originaria dell'elemento che in quel momento è il primo della sottolista)
+#con l'addizione si ottiene l'indice della lista originaria che vogliamo come output finale
