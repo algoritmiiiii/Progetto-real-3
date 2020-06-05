@@ -6,13 +6,15 @@ def create_partition(lista,tempo):
         print("sei un down")
     else:
         x=0
+        vuota=[]
         for i in range(0,len(lista)-tempo+1):
             j=tempo+x
             partizione=list(lista[i:j])
             indice_minimo_part=partizione.index(min(partizione))
             y=i+indice_minimo_part
-            print(y)
+            vuota.append(y)
             x=x+1
+        return vuota
 
 print(create_partition(prezzi,T))
 
